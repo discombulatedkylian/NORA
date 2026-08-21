@@ -473,7 +473,6 @@ async function handleSetFooter(selectInteraction, rootInteraction, state) {
 }
 
 async function handleSetImages(selectInteraction, rootInteraction, state) {
-    await selectInteraction.deferUpdate();
     await selectInteraction.deferUpdate().catch(() => {});
 
     const imageSelect = new StringSelectMenuBuilder()
