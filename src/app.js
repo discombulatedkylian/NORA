@@ -111,7 +111,7 @@ class TitanBot extends Client {
       
       updateActivity();
       
-      setInterval(updateActivity, 2 * 60 * 1000);
+      setInterval(updateActivity, 1 * 60 * 1000);
       startupLog('Discord login successful');
       
       startupLog('Registering slash commands globally...');
