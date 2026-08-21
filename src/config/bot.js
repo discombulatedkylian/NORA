@@ -23,17 +23,17 @@ export const botConfig = {
   // 5 = Competing
   activities: [
     {
-      name: "Just Moderating the server..",
+      name: "🛡️ Just Moderating the server..",
       state: "Moderating the server",
       type: 3, // Watching
     },
     {
-      name: "Waiting for the tickets to come in..",
+      name: "🎫 Waiting for the tickets to come in..",
       state: "Waiting for tickets",
       type: 3, // Watching
     },
     {
-      name: "Staring at the previews....",
+      name: "👀 Staring at the previews....",
       state: "Looking at previews",
       type: 3, // Watching
     },
