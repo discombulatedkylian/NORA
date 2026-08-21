@@ -88,6 +88,32 @@ class TitanBot extends Client {
       
       startupLog('Logging into Discord...');
       await this.login(this.config.bot.token);
+      
+      const activities = this.config.presence.activities;
+      let activityIndex = 0;
+      
+      const updateActivity = () => {
+        const activity = activities[activityIndex];
+      
+        this.user.setPresence({
+          status: this.config.presence.status,
+          activities: [
+            {
+              name: activity.name,
+              state: activity.state,
+              type: activity.type,
+            },
+          ],
+        });
+      
+        activityIndex = (activityIndex + 1) % activities.length;
+      };
+      
+      updateActivity();
+      
+      setInterval(updateActivity, 2 * 60 * 1000);
+
+      
       startupLog('Discord login successful');
       
       startupLog('Registering slash commands globally...');
