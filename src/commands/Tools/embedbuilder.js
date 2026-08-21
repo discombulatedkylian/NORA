@@ -253,7 +253,7 @@ async function handleEditContent(selectInteraction, rootInteraction, state) {
 }
 
 async function handleSetColor(selectInteraction, rootInteraction, state) {
-    await selectInteraction.deferUpdate().catch(() => {});
+    await selectInteraction.deferUpdate();
 
     const colorSelect = new StringSelectMenuBuilder()
         .setCustomId('eb_color_pick')
