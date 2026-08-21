@@ -10,25 +10,40 @@ export const botConfig = {
   // - "dnd"       = red do-not-disturb
   // - "invisible" = appears offline
   presence: {
-    // Current online state shown on Discord.
-    status: "online",
+  // Current online state shown on Discord.
+  status: "online",
 
-    // Activity lines shown under the bot name.
-    // `type` number mapping from Discord:
-    // 0 = Playing
-    // 1 = Streaming
-    // 2 = Listening
-    // 3 = Watching
-    // 4 = Custom
-    // 5 = Competing
-    activities: [
-      {
-        name: ":tools: Just moderating the server...", // required by Discord API, not shown in the client
-        state: "Overseeing",     // this is what people actually see
-        type: 3,               // Custom
-      },
-    ],
-  },
+  // Activity lines shown under the bot name.
+  // `type` number mapping from Discord:
+  // 0 = Playing
+  // 1 = Streaming
+  // 2 = Listening
+  // 3 = Watching
+  // 4 = Custom
+  // 5 = Competing
+  activities: [
+    {
+      name: "Just Moderating the server..",
+      state: "Moderating the server",
+      type: 3, // Watching
+    },
+    {
+      name: "Waiting for the tickets to come in..",
+      state: "Waiting for tickets",
+      type: 3, // Watching
+    },
+    {
+      name: "Staring at the previews....",
+      state: "Looking at previews",
+      type: 3, // Watching
+    },
+  ],
+
+  // Scripter message kept for reference:
+  // name: ":tools: Just moderating the server..."
+  // state: "Overseeing"
+  // type: 3
+},
 
   // =========================
   // COMMAND BEHAVIOR
